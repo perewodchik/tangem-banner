@@ -4,7 +4,7 @@ export const theme = {
     black: "#000",
   },
   brand: {
-    gold: "D7A830",
+    gold: "#D7A830",
   },
   gradients: {
     gold: "linear-gradient(#7D5317, #EDDF95)",
@@ -16,4 +16,4 @@ export const theme = {
   background: {
     grey: "#FFFFFF1A",
   },
-};
+} as const;

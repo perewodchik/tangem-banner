@@ -1,0 +1,1 @@
+export { TopBannerConnector } from "./model";

@@ -1,7 +1,13 @@
+import { TopBannerConnector } from "@/widgets/banner";
+
 type Props = {
   isBannerClosed: boolean;
 };
 
-export const MainPage = ({ isBannerClosed }: Props) => {
-  return <div>{isBannerClosed ? "closed" : "not closed"}</div>;
+export const MainPage = ({}: Props) => {
+  return (
+    <div>
+      <TopBannerConnector />
+    </div>
+  );
 };
