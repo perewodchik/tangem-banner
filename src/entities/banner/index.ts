@@ -1,1 +1,1 @@
-export { TopBanner } from "./ui";
+export { TopBanner } from "./top-banner";
