@@ -1,4 +1,5 @@
 import { TopBannerConnector } from "@/widgets/banner";
+import { PageLayout } from "@/widgets/page-layout";
 
 type Props = {
   isBannerClosed: boolean;
@@ -6,8 +7,8 @@ type Props = {
 
 export const MainPage = ({}: Props) => {
   return (
-    <div>
+    <PageLayout>
       <TopBannerConnector />
-    </div>
+    </PageLayout>
   );
 };

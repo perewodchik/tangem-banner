@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import {
-  BannerImage,
-  CloseButton,
-  MobileNavigation,
-  RoundButton,
-} from "../../atoms";
-import { BannerInfo, BannerMobileContent } from "../../molecules";
+
 import { useDeviceSize } from "@/shared/theme";
+import { CloseButton } from "@/shared/ui/atoms";
+
+import { BannerImage, MobileNavigation, RoundButton } from "../../atoms";
+import { BannerInfo, BannerMobileContent } from "../../molecules";
 
 const BannerWrapper = styled.div`
   display: flex;
