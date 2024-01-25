@@ -1,4 +1,4 @@
-import { TopBannerConnector } from "@/widgets/banner";
+import { FloatingBannerConnector, TopBannerConnector } from "@/widgets/banner";
 import { PageLayout } from "@/widgets/page-layout";
 
 type Props = {
@@ -9,6 +9,7 @@ export const MainPage = ({}: Props) => {
   return (
     <PageLayout>
       <TopBannerConnector />
+      <FloatingBannerConnector />
     </PageLayout>
   );
 };

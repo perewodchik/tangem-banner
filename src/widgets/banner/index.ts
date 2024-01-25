@@ -1,1 +1,1 @@
-export { TopBannerConnector } from "./model";
+export { TopBannerConnector, FloatingBannerConnector } from "./model";

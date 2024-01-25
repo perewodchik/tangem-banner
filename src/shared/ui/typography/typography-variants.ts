@@ -2,7 +2,8 @@ export type TypographyVariantName =
   | "body-bold"
   | "body-medium"
   | "body-regular"
-  | "heading";
+  | "heading"
+  | "subheading";
 
 export type FontProperty =
   | "font-family"
@@ -48,5 +49,13 @@ export const typographyVariants: TypographyVariant = {
     "font-weight": "500",
     "line-height": "110%",
     "letter-spacing": "-1.84px",
+  },
+  subheading: {
+    "font-family": "Graphik LC Web Medium",
+    "font-size": "40px",
+    "font-style": "normal",
+    "font-weight": "500",
+    "line-height": "110%",
+    "letter-spacing": "-1.6px",
   },
 };

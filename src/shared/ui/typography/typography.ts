@@ -3,14 +3,16 @@ import {
   TypographyVariantName,
   typographyVariants,
 } from "./typography-variants";
+import { SpacingProps, applySpacing } from "@/shared/theme/spacing";
 
 type Props = {
   variant: TypographyVariantName;
   textAlign?: "left" | "center" | "right";
   color?: string;
-};
+} & SpacingProps;
 
 export const Typography = styled.span<Props>`
+  ${applySpacing}
   font-family: ${({ variant }) => typographyVariants[variant]["font-family"]};
   font-size: ${({ variant }) => typographyVariants[variant]["font-size"]};
   font-style: ${({ variant }) => typographyVariants[variant]["font-style"]};
