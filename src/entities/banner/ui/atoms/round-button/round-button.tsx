@@ -7,7 +7,7 @@ const ButtonWrapper = styled.div`
   padding: 10px 14px;
   border-radius: 100px;
   backdrop-filter: blur(12px);
-  background: ${({ theme }) => theme.common.white};
+  background: ${({ theme }) => theme.colors.common.white};
 `;
 
 type Props = {
@@ -20,7 +20,7 @@ export const RoundButton = ({ children, onClick }: Props) => {
 
   return (
     <ButtonWrapper onClick={onClick} role="button">
-      <Typography variant="body-medium" color={theme?.common.black}>
+      <Typography variant="body-medium" color={theme.colors.common.black}>
         {children}
       </Typography>
     </ButtonWrapper>

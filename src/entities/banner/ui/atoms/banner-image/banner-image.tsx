@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
-export const Image = styled.img`
-  height: 100%;
-  object-fit: contain;
+export const ImageWrapper = styled.div<{ src: string }>`
+  height: 54px;
+  max-width: 160px;
+  flex: 1;
+  width: 100%;
+  background-image: url(${({ src }) => src});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 type Props = {
@@ -10,5 +16,5 @@ type Props = {
 };
 
 export const BannerImage = ({ src }: Props) => {
-  return <Image alt="gift and tropy" src={src} />;
+  return <ImageWrapper role="img" src={src}></ImageWrapper>;
 };

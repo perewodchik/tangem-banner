@@ -5,3 +5,4 @@ export { BannerDiscount } from "./banner-discount";
 export { BannerImage } from "./banner-image";
 export { BannerPromocode } from "./banner-promocode";
 export { ItemSeparator } from "./item-separator";
+export { MobileNavigation } from "./mobile-navigation";

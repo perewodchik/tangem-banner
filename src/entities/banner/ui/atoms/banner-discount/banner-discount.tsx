@@ -11,7 +11,7 @@ export const BannerDiscount = ({ discount }: Props) => {
   return (
     <Typography
       variant="body-bold"
-      color={theme.brand.gold}
+      color={theme.colors.brand.gold}
     >{`${discount}%OFF`}</Typography>
   );
 };

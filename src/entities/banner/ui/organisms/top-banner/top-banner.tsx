@@ -1,20 +1,23 @@
 import styled from "styled-components";
 import {
-  BannerDiscount,
-  BannerDurationText,
   BannerImage,
-  BannerPromocode,
   CloseButton,
+  MobileNavigation,
   RoundButton,
 } from "../../atoms";
-import { BannerInfo } from "../../molecules";
+import { BannerInfo, BannerMobileContent } from "../../molecules";
+import { useDeviceSize } from "@/shared/theme";
 
 const BannerWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  background-color: ${({ theme }) => theme.common.black};
+  gap: 4px;
+  background-color: ${({ theme }) => theme.colors.common.black};
+  @media (width < ${({ theme }) => theme.breakpoints.tablet}px) {
+    padding-left: 0px;
+  }
 `;
 
 const Row = styled.div`
@@ -37,18 +40,31 @@ export const TopBanner = ({
   promocode,
   onCloseBanner,
 }: Props) => {
+  const deviceSize = useDeviceSize();
+
   return (
     <BannerWrapper role="banner">
       <BannerImage src="/images/top-banner.png" />
-      <BannerInfo
-        discount={discount}
-        duration={duration}
-        promocode={promocode}
-      />
-      <Row>
-        <RoundButton onClick={onCloseBanner}>Shop now</RoundButton>
-        <CloseButton onClick={onCloseBanner} />
-      </Row>
+      {deviceSize === "sm" ? (
+        <>
+          <BannerMobileContent discount={discount} />
+          <MobileNavigation onClick={onCloseBanner} />
+        </>
+      ) : (
+        <>
+          <BannerInfo
+            discount={discount}
+            duration={duration}
+            promocode={promocode}
+          />
+          <Row>
+            <RoundButton onClick={onCloseBanner}>Shop now</RoundButton>
+            {deviceSize === "lg" ? (
+              <CloseButton onClick={onCloseBanner} />
+            ) : null}
+          </Row>
+        </>
+      )}
     </BannerWrapper>
   );
 };

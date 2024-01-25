@@ -1,4 +1,4 @@
-import { useTheme } from "@/shared/theme";
+import { useDeviceSize, useTheme } from "@/shared/theme";
 import { Typography } from "@/shared/ui";
 
 type Props = {
@@ -7,15 +7,16 @@ type Props = {
 
 export const BannerPromocode = ({ promocode }: Props) => {
   const theme = useTheme();
-  console.log(theme);
+  const deviceSize = useDeviceSize();
+
   return (
     <Typography variant="body-regular">
       Use Code{" "}
-      <Typography variant="body-bold" color={theme.brand.gold}>
+      <Typography variant="body-bold" color={theme.colors.brand.gold}>
         {" "}
         {promocode}
       </Typography>
-      {" at checkout"}
+      {deviceSize === "lg" ? " at checkout" : null}
     </Typography>
   );
 };

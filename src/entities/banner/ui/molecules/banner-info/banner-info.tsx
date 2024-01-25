@@ -8,8 +8,10 @@ import {
 
 const Wrapper = styled.div`
   display: flex;
+  flex: 1;
   gap: 12px;
   align-items: center;
+  justify-content: center;
 `;
 
 type Props = {

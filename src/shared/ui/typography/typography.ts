@@ -19,5 +19,5 @@ export const Typography = styled.span<Props>`
   letter-spacing: ${({ variant }) =>
     typographyVariants[variant]["letter-spacing"]};
   text-align: ${({ textAlign }) => textAlign};
-  color: ${({ color, theme }) => color ?? theme.text.primary};
+  color: ${({ color, theme }) => color ?? theme.colors.text.primary};
 `;
