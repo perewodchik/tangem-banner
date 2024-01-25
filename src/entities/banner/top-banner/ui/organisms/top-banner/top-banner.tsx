@@ -5,6 +5,7 @@ import { CloseButton } from "@/shared/ui/atoms";
 
 import { BannerImage, MobileNavigation, RoundButton } from "../../atoms";
 import { BannerInfo, BannerMobileContent } from "../../molecules";
+import { TOP_BANNER_ID } from "../../../config";
 
 const BannerWrapper = styled.div`
   display: flex;
@@ -41,7 +42,7 @@ export const TopBanner = ({
   const deviceSize = useDeviceSize();
 
   return (
-    <BannerWrapper role="banner">
+    <BannerWrapper role="banner" id={TOP_BANNER_ID}>
       <BannerImage src="/images/top-banner.png" />
       {deviceSize === "sm" ? (
         <>

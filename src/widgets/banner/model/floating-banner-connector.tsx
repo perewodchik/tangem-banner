@@ -1,5 +1,6 @@
 import { FloatingBanner } from "@/entities/banner";
 import { $isPromoBannerVisible, dismissPromoBanner } from "@/features/banner";
+import { $isTopBannerInViewport } from "@/features/banner/model";
 import { useUnit } from "effector-react";
 
 export const FloatingBannerConnector = () => {
@@ -11,6 +12,7 @@ export const FloatingBannerConnector = () => {
     promotionName: "Black Friday",
   };
   const isBannerVisible = useUnit($isPromoBannerVisible);
+  const isTopBannerInViewport = useUnit($isTopBannerInViewport);
 
   if (!isBannerVisible) {
     return null;
@@ -18,6 +20,7 @@ export const FloatingBannerConnector = () => {
 
   return (
     <FloatingBanner
+      isFloatingBannerVisible={!isTopBannerInViewport}
       link={link}
       promotionName={promotionName}
       promocode={promocode}
