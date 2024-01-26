@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import { useDeviceSize } from "@/shared/theme";
 import { CloseButton } from "@/shared/ui/atoms";
@@ -7,12 +7,6 @@ import { BannerImage, MobileNavigation, RoundButton } from "../../atoms";
 import { BannerInfo, BannerMobileContent } from "../../molecules";
 import { TOP_BANNER_ID } from "../../../config";
 import { useRef } from "react";
-import { Transition } from "react-transition-group";
-import {
-  transitionDuration,
-  defaultStyle,
-  transitionStyles,
-} from "./animation";
 
 const BannerWrapper = styled.div`
   display: flex;

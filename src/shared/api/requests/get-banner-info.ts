@@ -6,6 +6,8 @@ export type GetBannerInfoResponse = {
   promocodeDiscount: number;
 };
 
+const REQUEST_DELAY = 1000;
+
 export const getBannerInfo = async () => {
   return await new Promise<GetBannerInfoResponse>((resolve) => {
     setTimeout(
@@ -17,7 +19,7 @@ export const getBannerInfo = async () => {
           promocodeDiscount: 10,
           promotionName: "Black friday",
         }),
-      2000
+      REQUEST_DELAY
     );
   });
 };

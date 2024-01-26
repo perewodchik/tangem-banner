@@ -6,6 +6,7 @@ const NavbarWrapper = styled.nav`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.background.navbar};
   padding: 16px;
+  z-index: 10;
 `;
 
 export const Navbar = () => {
