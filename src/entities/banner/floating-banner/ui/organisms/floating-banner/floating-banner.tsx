@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-import { CloseButton } from "@/shared/ui/atoms";
+import { CloseButton, LinkButton } from "@/shared/ui/atoms";
 import {
   DiscountPercentage,
-  LinkButton,
   PromocodeText,
   PromotionEventName,
 } from "../../atoms";

@@ -21,6 +21,7 @@
     "effector-react": "^23.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
     "react-transition-group": "^4.4.5",
     "styled-components": "^6.1.8"
   },

@@ -1,5 +1,5 @@
 import { FloatingBannerConnector, TopBannerConnector } from "@/widgets/banner";
-import { PageLayout } from "@/widgets/page-layout";
+import { PageLayout } from "@/widgets/layout";
 
 type Props = {
   isBannerClosed: boolean;
