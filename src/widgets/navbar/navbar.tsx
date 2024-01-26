@@ -1,15 +1,24 @@
+import { useTheme } from "@/shared/theme";
 import { Typography } from "@/shared/ui";
 import styled from "styled-components";
 
 const NavbarWrapper = styled.nav`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.brand.gold};
+  background-color: ${({ theme }) => theme.colors.background.navbar};
+  padding: 16px;
 `;
 
 export const Navbar = () => {
+  const theme = useTheme();
+
   return (
     <NavbarWrapper>
-      <Typography variant="heading">Tangem Logo</Typography>
+      <Typography variant="subheading">
+        Tangem{" "}
+        <Typography color={theme.colors.brand.gold} variant="body-regular">
+          TEST TASK
+        </Typography>
+      </Typography>
     </NavbarWrapper>
   );
 };

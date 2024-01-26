@@ -686,6 +686,18 @@
   resolved "https://registry.yarnpkg.com/@tanstack/history/-/history-1.1.0.tgz#b56caf1442d3fcb84d1109a17f264761814720f5"
   integrity sha512-sWM9CCvG1XoCYRQgPAw1zr8Y+JYmOJCFpYxi1BtQAVa/w3u1vfyNjVjVcluCtx+Ru6UGKnECMBo3zX44cYTsDA==
 
+"@tanstack/query-core@5.17.19":
+  version "5.17.19"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.17.19.tgz#212515ccc7a6b913afee6b71ce3e7df2c4d85f7d"
+  integrity sha512-Lzw8FUtnLCc9Jwz0sw9xOjZB+/mCCmJev38v2wHMUl/ioXNIhnNWeMxu0NKUjIhAd62IRB3eAtvxAGDJ55UkyA==
+
+"@tanstack/react-query@^5.17.19":
+  version "5.17.19"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.17.19.tgz#d6fc243faa469bb84952dd810faea47dabe389fc"
+  integrity sha512-qaQENB6/03Gj3dFZGvdmUoqeUGlGm7P1p0RmaR04Bf1Ib1T9lLGimcC9T3oCFbrx0b2ZF21ngjFZNjj9uPJMcg==
+  dependencies:
+    "@tanstack/query-core" "5.17.19"
+
 "@tanstack/react-router@1.0.9":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.0.9.tgz#fcecdb3185b6e02bd701f2bf692c92bf235f1d9d"

@@ -1,0 +1,10 @@
+@container floating-banner (min-width: 400px) {
+  .floating-banner__content {
+    align-self: flex-end;
+  }
+}
+
+#floating_banner {
+  container-type: inline-size;
+  container-name: floating-banner;
+}
