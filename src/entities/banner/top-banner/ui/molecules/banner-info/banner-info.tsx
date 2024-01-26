@@ -15,15 +15,21 @@ const Wrapper = styled.div`
 `;
 
 type Props = {
+  promotionName: string;
   duration: string;
-  discount: string;
+  discount: number;
   promocode: string;
 };
 
-export const BannerInfo = ({ discount, duration, promocode }: Props) => {
+export const BannerInfo = ({
+  promotionName,
+  discount,
+  duration,
+  promocode,
+}: Props) => {
   return (
     <Wrapper>
-      <BannerDurationText duration={duration} />
+      <BannerDurationText promotionName={promotionName} duration={duration} />
       <ItemSeparator />
       <BannerDiscount discount={discount} />
       <ItemSeparator />

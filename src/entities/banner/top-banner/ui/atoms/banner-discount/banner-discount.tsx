@@ -2,7 +2,7 @@ import { Typography } from "@/shared/ui";
 import { useTheme } from "styled-components";
 
 type Props = {
-  discount: string;
+  discount: number;
 };
 
 export const BannerDiscount = ({ discount }: Props) => {

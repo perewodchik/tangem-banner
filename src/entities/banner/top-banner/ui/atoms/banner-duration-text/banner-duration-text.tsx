@@ -2,13 +2,14 @@ import {} from "@/shared/theme";
 import { Typography } from "@/shared/ui";
 
 type Props = {
+  promotionName: string;
   duration: string;
 };
 
-export const BannerDurationText = ({ duration }: Props) => {
+export const BannerDurationText = ({ promotionName, duration }: Props) => {
   return (
     <Typography variant="body-medium">
-      Black Friday,
+      {`${promotionName}, `}
       <Typography variant="body-regular">{` ${duration}`}</Typography>
     </Typography>
   );

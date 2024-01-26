@@ -3,23 +3,27 @@ import { Typography } from "@/shared/ui";
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.a`
+  text-decoration: none;
   padding: 10px 14px;
   border-radius: 100px;
   backdrop-filter: blur(12px);
   background: ${({ theme }) => theme.colors.common.white};
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 type Props = {
-  onClick: () => void;
+  link: string;
   children: ReactNode;
 };
 
-export const RoundButton = ({ children, onClick }: Props) => {
+export const RoundButton = ({ children, link }: Props) => {
   const theme = useTheme();
 
   return (
-    <ButtonWrapper onClick={onClick} role="button">
+    <ButtonWrapper href={link} role="link">
       <Typography variant="body-medium" color={theme.colors.common.black}>
         {children}
       </Typography>

@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 `;
 
 type Props = {
-  discount: string;
+  discount: number;
 };
 
 export const BannerMobileContent = ({ discount }: Props) => {

@@ -5,14 +5,11 @@ import { $isPromoBannerVisible, dismissPromoBanner } from "@/features/banner";
 import { useEffect } from "react";
 import { TOP_BANNER_ID } from "@/entities/banner/top-banner";
 import { setIsTopBannerInViewport } from "@/features/banner/model";
+import { useGetBannerInfo } from "@/features/banner/api";
 
 export const TopBannerConnector = () => {
   //TODO: Fetch data
-  const { discount, duration, promocode } = {
-    discount: "10",
-    duration: "24-27 Nov",
-    promocode: "10FRIDAY",
-  };
+  const { data: useGetBannerInfoData, isLoading } = useGetBannerInfo();
   const isBannerVisible = useUnit($isPromoBannerVisible);
 
   useEffect(() => {
@@ -46,15 +43,20 @@ export const TopBannerConnector = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [useGetBannerInfoData]);
 
-  if (!isBannerVisible) {
-    return null;
-  }
+  const duration = useGetBannerInfoData?.duration ?? "";
+  const link = useGetBannerInfoData?.link ?? "";
+  const promocode = useGetBannerInfoData?.promocode ?? "";
+  const promocodeDiscount = useGetBannerInfoData?.promocodeDiscount ?? 0;
+  const promotionName = useGetBannerInfoData?.promotionName ?? "";
 
   return (
     <TopBanner
-      discount={discount}
+      isBannerVisible={isBannerVisible && !isLoading}
+      link={link}
+      promotionName={promotionName}
+      discount={promocodeDiscount}
       duration={duration}
       promocode={promocode}
       onCloseBanner={dismissPromoBanner}
