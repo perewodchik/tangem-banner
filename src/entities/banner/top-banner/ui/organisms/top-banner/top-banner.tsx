@@ -59,7 +59,7 @@ export const TopBanner = ({
       {deviceSize === "sm" ? (
         <>
           <BannerMobileContent discount={discount} />
-          <MobileNavigation onClick={onCloseBanner} />
+          <MobileNavigation link={link} />
         </>
       ) : (
         <>

@@ -42,6 +42,8 @@ const BannerWrapper = styled.div`
   background-size: cover;
   background-position-x: 75%;
 
+  z-index: 100;
+
   @media (width < ${BANNER_WIDTH + BANNER_MARGIN_RIGHT}px) {
     width: 100vw;
     right: 0px;

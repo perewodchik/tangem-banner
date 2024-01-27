@@ -1,7 +1,8 @@
 import { MenuIcon } from "@/shared/icons";
 import styled from "styled-components";
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.a`
+  text-decoration: none;
   border-radius: 50%;
   &:hover {
     opacity: 0.7;
@@ -10,12 +11,12 @@ const ButtonWrapper = styled.div`
 `;
 
 type Props = {
-  onClick: () => void;
+  link: string;
 };
 
-export const MobileNavigation = ({ onClick }: Props) => {
+export const MobileNavigation = ({ link }: Props) => {
   return (
-    <ButtonWrapper onClick={onClick} role="link">
+    <ButtonWrapper href={link} role="link">
       <MenuIcon />
     </ButtonWrapper>
   );

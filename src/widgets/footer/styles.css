@@ -1,0 +1,10 @@
+@container footer-container (max-width: 600px) {
+  #footer {
+    flex-direction: column;
+  }
+}
+
+#footer {
+  container-type: inline-size;
+  container-name: footer-container;
+}
