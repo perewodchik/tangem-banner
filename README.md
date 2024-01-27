@@ -1,27 +1,32 @@
-# React + TypeScript + Vite
+# Tangem Banner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сайт задеплоен на [tangem-banner.vercel.app](tangem-banner.vercel.app)
 
-Currently, two official plugins are available:
+## Декомпозиция
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Сетап проекта **2.5ч** (настройка папок, темы, типографии)
+- Верстка верхнего баннера с учетом адаптива **2ч**
+- Верстка плавающего баннера с адаптивом **1.5ч**
+- Верстка лейаута страницы, навбара и футера **2ч**
+- Бизнес-логика закрытия и появления плавающего баннера **2ч**
+- Добавление мокового запроса данных о баннере **1.5ч**
+- Роутинг **1ч**
+- Деплой на версель **0.5ч**
 
-## Expanding the ESLint configuration
+Итого: **13ч**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## О проекте
 
-- Configure the top-level `parserOptions` property like this:
+- Инициализирован с помощью Vite
+- Для архитектуры использовал **Feature-Sliced Design**, для композиции компонентов **Atomic Design**, выполнил деление компонентов на умные/глупые
+- Используемый стек: React, React Router, Styled-Components, Effector, React-Query
+- Логику с баннером сделал через **IntersectionObserver**
+- Для работы с состоянием баннера и сохранением в locale storage использовал библиотеку **Effector**
+- Сделал имитацию запроса на сервер с помощью **React-Query**, который кеширует данные от фейкового запроса через setTimeout
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Заметки для дизайнера
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- очень больно было экспортировать картинки и подгонять под макет
+- группы элементов не были подписаны
+- присутствовали элементы, которые не использовались (эллипсы)
+- отсутсвовал UI-кит с вынесенной типографией, цветами

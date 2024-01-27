@@ -6,7 +6,7 @@ import { LINKS } from "./constants";
 
 import "./styles.css";
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.common.black};
   padding: 24px;
