@@ -1,6 +1,6 @@
 # Tangem Banner
 
-Сайт задеплоен на [tangem-banner.vercel.app](tangem-banner.vercel.app)
+Сайт задеплоен на [tangem-banner.vercel.app](https://tangem-banner.vercel.app)
 
 ## Декомпозиция
 
